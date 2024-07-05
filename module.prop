@@ -1,0 +1,5 @@
+name=Disable Unnecessary Services
+version=v1.0.0                                                                                     
+versionCode=1
+author=Rompelhd
+description=Disables unnecessary system and Google services, improving anonymity, performance and battery life

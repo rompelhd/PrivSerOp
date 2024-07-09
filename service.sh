@@ -67,7 +67,8 @@ disable_cast_services() {
     disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastMediaRoute2ProviderService_Persistent"
     disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastMediaRouteProviderService"
     disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastMediaRouteProviderService_Isolated"
-    disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastMediaRouteProviderService_Persistent"                          disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastRemoteDisplayProviderService"
+    disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastMediaRouteProviderService_Persistent"
+    disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastRemoteDisplayProviderService"
     disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastRemoteDisplayProviderService_Isolated"
     disable_service "com.google.android.gms/com.google.android.gms.cast.media.CastRemoteDisplayProviderService_Persistent"
     disable_service "com.google.android.gms/com.google.android.gms.cast.service.CastSocketMultiplexerLifeCycleService"
@@ -86,7 +87,8 @@ disable_discovery_services() {
     disable_service "com.google.android.gms/com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
 }
 
-disable_logger_services() {                                                                                                                      disable_service "com.google.android.gms/com.google.android.gms.analytics.internal.PlayLogReportingService"
+disable_logger_services() {
+    disable_service "com.google.android.gms/com.google.android.gms.analytics.internal.PlayLogReportingService"
     disable_service "com.google.android.gms/com.google.android.gms.romanesco.ContactsLoggerUploadService"
     disable_service "com.google.android.gms/com.google.android.gms.magictether.logging.DailyMetricsLoggerService"
     disable_service "com.google.android.gms/com.google.android.gms.checkin.EventLogService"
@@ -115,7 +117,8 @@ disable_security_services() {
 
 disable_safety_services() {
     disable_service "com.google.android.gms/com.google.android.gms.thunderbird.service.EmergencyPersistentService"
-    disable_service "com.google.android.gms/com.google.android.gms.thunderbird.service.EmergencyLocationService"                                 disable_service "com.google.android.gms/com.google.android.gms.personalsafety.service.PersonalSafetyService"
+    disable_service "com.google.android.gms/com.google.android.gms.thunderbird.service.EmergencyLocationService"
+    disable_service "com.google.android.gms/com.google.android.gms.personalsafety.service.PersonalSafetyService"
     disable_service "com.google.android.gms/com.google.android.gms.kids.chimera.KidsServiceProxy"
 }
 
@@ -131,7 +134,8 @@ disable_trust_agent_services() {
 }
 
 disable_updater_services() {
-    disable_service "com.google.android.gms/com.google.android.gms.instantapps.service.DomainFilterUpdateService"                                disable_service "com.google.android.gms/com.google.android.gms.auth.folsom.service.FolsomPublicKeyUpdateService"
+    disable_service "com.google.android.gms/com.google.android.gms.instantapps.service.DomainFilterUpdateService"
+    disable_service "com.google.android.gms/com.google.android.gms.auth.folsom.service.FolsomPublicKeyUpdateService"
     disable_service "com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService"
     disable_service "com.google.android.gms/com.google.android.gms.phenotype.sync.service.PackageUpdateTaskService"
     disable_service "com.google.android.gms/com.google.android.gms.mobiledataplan.service.PeriodicUpdaterService"
@@ -148,7 +152,8 @@ disable_wear_os_services() {
     disable_service "com.google.android.gms/com.google.android.gms.fused.wearable.GmsWearableListenerService"
     disable_service "com.google.android.gms/com.google.android.gms.mdm.services.MdmPhoneWearableListenerService"
     disable_service "com.google.android.gms/com.google.android.gms.tapandpay.wear.WearProxyService"
-    disable_service "com.google.android.gms/com.google.android.gms.wearable.service.WearableControlService"                                      disable_service "com.google.android.gms/com.google.android.gms.wearable.service.WearableService"
+    disable_service "com.google.android.gms/com.google.android.gms.wearable.service.WearableControlService"
+    disable_service "com.google.android.gms/com.google.android.gms.wearable.service.WearableService"
     disable_service "com.google.android.gms/com.google.android.gms.fitness.wearable.service.WearableSyncAccountService"
     disable_service "com.google.android.gms/com.google.android.gms.fitness.wearable.service.WearableSyncConfigService"
     disable_service "com.google.android.gms/com.google.android.gms.fitness.wearable.service.WearableSyncConnectionService"
@@ -164,7 +169,8 @@ disable_telemetry_services() {
 disable_oneplus_services() {
     disable_service "com.oplus.wifitest"
     disable_service "com.oplus.nrMode" # If on 5G, do not deactivate; on 4G or 4G+, deactivate.
-    disable_service "com.oplus.cast"                                                                                                             disable_service "com.oplus.statistics.rom"
+    disable_service "com.oplus.cast"
+    disable_service "com.oplus.statistics.rom"
     disable_service "com.oplus.romupdate" # If your device has no further updates
     disable_service "com.oplus.ota" # Same as above, this process constantly checks for updates
     disable_service "com.oplus.ocs" # Haha, you have root you don't need official support
@@ -172,6 +178,14 @@ disable_oneplus_services() {
     disable_service "com.oplus.bttestmode"
     disable_service "com.oplus.opusermanual"
     disable_service "com.oneplus.account" # If you don't have a oneplus account
+    disable_service "com.oneplus.opshelf"
+    disable_service "com.qualcomm.qti.modemtestmode"
+    disable_service "com.android.traceur"
+    disable_service "com.google.android.apps.wellbeing"
+    disable_service "com.oneplus.membership"
+    disable_service "com.android.cts.priv.ctsshim"
+    disable_service "com.android.cts.ctsshim"
+    disable_service "com.oplus.interconnectcollectkit"
 }
 
 check_boot_status
@@ -183,7 +197,8 @@ disable_bug_report_services
 disable_cast_services
 disable_debug_services
 disable_discovery_services
-disable_logger_services                                                                                                                      disable_nearby_services
+disable_logger_services
+disable_nearby_services
 disable_security_services
 disable_safety_services
 disable_promotion_services
